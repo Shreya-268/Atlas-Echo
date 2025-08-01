@@ -52,3 +52,17 @@ document.querySelectorAll('.gallery-item').forEach(item => {
     this.classList.add('clicked');
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const customNav = document.getElementById('customNav');
+    const closeBtn = document.getElementById('closeBtn');
+
+    menuToggle.addEventListener('click', function() {
+        customNav.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', function() {
+        customNav.classList.remove('active');
+    });
+});
