@@ -79,3 +79,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+// ===== Inspire Words Animation =====
+const inspireWords = [
+  "I",
+  "IN", 
+  "INS",
+  "INSP", 
+  "INSPI", 
+  "INSPIR", 
+  "INSPIRE",
+  "INSPIRE W", 
+  "INSPIRE WO", 
+  "INSPIRE WOR", 
+  "INSPIRE WORD", 
+  "INSPIRE WORDS"
+];
+
+const inspireContainer = document.getElementById('inspireWords');
+let inspireIndex = 0;
+
+function showNextInspireWord() {
+  if (!inspireContainer) return;
+  inspireContainer.textContent = inspireWords[inspireIndex];
+  inspireIndex = (inspireIndex + 1) % inspireWords.length;
+}
+
+setInterval(showNextInspireWord, 300);
