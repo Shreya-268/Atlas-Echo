@@ -59,10 +59,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeBtn = document.getElementById('closeBtn');
 
     menuToggle.addEventListener('click', function() {
-        customNav.classList.add('active');
+        customNav.classList.add('open');
     });
 
     closeBtn.addEventListener('click', function() {
-        customNav.classList.remove('active');
+        customNav.classList.remove('open');
+    });
+
+    // OPTIONAL: Close nav when clicking anywhere outside the nav on desktop
+    document.addEventListener('click', function(event) {
+        // Only close if nav is open and click is outside nav and menuToggle
+        if (
+            customNav.classList.contains('open') &&
+            !customNav.contains(event.target) &&
+            event.target !== menuToggle
+        ) {
+            customNav.classList.remove('open');
+        }
     });
 });
+
