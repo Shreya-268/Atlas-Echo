@@ -7,30 +7,49 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <div id="loader">Atlas Echo</div>
 
+<div id="loader">
+  <div class="loader-text" id="loaderText">
+    <div class="line line1">
+      <span class="counter" id="counter">1</span> &nbsp; ATLAS ECHO
+    </div>
+    <div class="line line2">SEE THE WORLD.</div>
+    <div class="line line3">HEAR ITS <span class="echo-word">ECHO.</span></div>
+  </div>
+</div>
+
+
+
+
+
+  <!-- Navbar (Element 4) -->
   <header>
     <nav class="navbar">
-      <h1 class="logo">Atlas Echo</h1>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
+      <div class="nav-logo">Atlas Echo</div>
+      <ul class="nav-menu">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#team" class="nav-link">Team</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2 class="tagline">See the World. Hear Its Echo.</h2>
+  <!-- Hero Section (Element 9) -->
+  <section id="hero" class="hero">
+    <h2 class="tagline animated-text">See the World. Hear Its Echo.</h2>
     <p class="subtitle">A blog capturing the beauty of nature and journeys around the globe.</p>
   </section>
 
-  <section class="image-grid">
-    <img src="assets/Paris.jpg" alt="Paris" />
-    <img src="assets/Mountains.jpg" alt="Mountains" />
-    <img src="assets/Beach.jpg" alt="Beach" />
-    <img src="assets/Forest.jpg" alt="Forest" />
+  <!-- Gallery Grid (Elements 2, 3, 8) -->
+  <section id="gallery" class="image-grid">
+    <div class="gallery-item ripple"><img src="assets/Paris.jpg" alt="Paris" /></div>
+    <div class="gallery-item ripple"><img src="assets/Mountains.jpg" alt="Mountains" /></div>
+    <div class="gallery-item ripple"><img src="assets/Beach.jpg" alt="Beach" /></div>
+    <div class="gallery-item ripple"><img src="assets/Forest.jpg" alt="Forest" /></div>
   </section>
 
+  <!-- Marquee (Element 6) -->
   <section class="marquee">
     <div class="marquee-content">
       <span>🌍 Travel • Nature • Photography • Adventure • Culture •</span>
