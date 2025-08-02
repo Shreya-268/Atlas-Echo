@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Atlas Echo</title>
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Atlas Echo</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact-content">
+    <h2>Contact Us</h2>
+    <p>
+      Whether you have a question, a story to share, or want to collaborate — we’d love to hear from you.
+    </p>
+
+    <div class="about-grid">
+      <div class="about-card glass">
+        <h3>📧 Email</h3>
+        <p>reach@atlasecho.com</p>
+      </div>
+      <div class="about-card glass">
+        <h3>📍 Location</h3>
+        <p>Currently wandering — but based in Mumbai, India 🌍</p>
+      </div>
+    </div>
+
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelector('.contact-content').classList.add('visible');
+    });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
