@@ -11,6 +11,30 @@ body {
   scroll-behavior: smooth;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #164f38;
+  letter-spacing: 1px;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 34px;              /* Adjust as needed for your design */
+  height: 34px;
+  object-fit: contain;
+  margin-right: 4px;
+  filter: drop-shadow(0 2px 8px #bef0d220);
+  /* Optional pastel-glass tint for harmony: */
+  background: rgba(190,240,210,0.23);
+  border-radius: 11px;
+  box-shadow: 0 1px 6px rgba(130, 226, 174, 0.08);
+  padding: 3px;
+}
+
+
 /* ============ LOADER (Element 1) ============ */
 #loader {
   position: fixed;
