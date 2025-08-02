@@ -46,18 +46,70 @@
   </p>
 
 
-<!-- Gallery Grid (Elements 2, 3, 8) -->
-<section id="gallery" class="image-grid">
-  <div class="gallery-item ripple"><img src="assets/Paris.jpg" alt="Paris" /></div>
-  <div class="gallery-item ripple"><img src="assets/Mountains.jpg" alt="Mountains" /></div>
-  <div class="gallery-item ripple"><img src="assets/Beach.jpg" alt="Beach" /></div>
-  <div class="gallery-item ripple"><img src="assets/Forest.jpg" alt="Forest" /></div>
+<!-- Gallery Section Side-by-Side -->
+<section id="gallery-section" class="gallery-flex-container">
+
+  <!-- 📸 Left: Carousel -->
+  <div class="carousel-column">
+    <div class="carousel-container">
+      <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-item"><img src="assets/Paris.jpg" alt="Paris" /></div>
+        <div class="carousel-item"><img src="assets/Mountains.jpg" alt="Mountains" /></div>
+        <div class="carousel-item"><img src="assets/Beach.jpg" alt="Beach" /></div>
+        <div class="carousel-item"><img src="assets/Forest.jpg" alt="Forest" /></div>
+      </div>
+      <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- 🖼️ Right: Static Grid -->
+  <div class="static-grid-column">
+    <div class="image-grid small-grid">
+      <div class="gallery-item ripple"><img src="assets/Beach.jpg" alt="Lake" /></div>
+      <div class="gallery-item ripple"><img src="assets/forest.jpg" alt="Desert" /></div>
+      <div class="gallery-item ripple"><img src="assets/Mountains.jpg" alt="City" /></div>
+      <div class="gallery-item ripple"><img src="assets/paris.jpg" alt="Canyon" /></div>
+    </div>
+  </div>
+
 </section>
+
+<!-- Second Gallery Section (Flipped layout) -->
+<section class="gallery-flex-container">
+
+  <!-- 🖼️ Left: Static Grid -->
+  <div class="static-grid-column">
+    <div class="image-grid small-grid">
+      <div class="gallery-item ripple"><img src="assets/Beach.jpg" alt="Temple" /></div>
+      <div class="gallery-item ripple"><img src="assets/Mountains.jpg" alt="Village" /></div>
+      <div class="gallery-item ripple"><img src="assets/forest.jpg" alt="Lighthouse" /></div>
+      <div class="gallery-item ripple"><img src="assets/paris.jpg" alt="Field" /></div>
+    </div>
+  </div>
+
+  <!-- 📸 Right: Carousel -->
+  <div class="carousel-column">
+    <div class="carousel-container">
+      <button class="carousel-btn prev" id="prevBtn2">&#10094;</button>
+      <div class="carousel-track" id="carouselTrack2">
+        <div class="carousel-item"><img src="assets/Beach.jpg" alt="Night Sky" /></div>
+        <div class="carousel-item"><img src="assets/forest.jpg" alt="Glacier" /></div>
+        <div class="carousel-item"><img src="assets/Mountains.jpg" alt="Train Ride" /></div>
+        <div class="carousel-item"><img src="assets/paris.jpg" alt="River" /></div>
+      </div>
+      <button class="carousel-btn next" id="nextBtn2">&#10095;</button>
+    </div>
+  </div>
+
+</section>
+
+
 
 <section class="inspire-section">
   <div id="inspireWords" class="animated-text-word"></div>
-  <button class="blog-btn">Start Blog</button>
-  <p class="blog-quote">✨ “Start Writing Your Journey. Let Every Place Tell Its Story.”</p>
+<a href="write.html" class="blog-btn">Start Blog</a>
+<p class="blog-quote">✨ “Start Writing Your Journey. Let Every Place Tell Its Story.”</p>
 </section>
 
 

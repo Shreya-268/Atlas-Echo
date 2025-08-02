@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #e9fbe5, #d2f0cb);
+  color: #1b4c2e;
+}
+
+.write-header {
+  text-align: center;
+  padding: 3rem 2rem 1rem;
+  background: url('../assets/nature-bg.jpg') center/cover no-repeat;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.write-header h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+}
+
+.editor-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.blog-title {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #c7eac3;
+  border-radius: 10px;
+  background: #f6fff5;
+}
+
+.blog-body {
+  width: 100%;
+  min-height: 300px;
+  font-size: 1.1rem;
+  padding: 1rem;
+  border: 2px solid #c7eac3;
+  border-radius: 10px;
+  background: #f6fff5;
+  resize: vertical;
+}
+
+.editor-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.save-btn,
+.publish-btn {
+  padding: 0.7rem 1.6rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.save-btn {
+  background: #bee6be;
+  color: #1c4f2d;
+}
+
+.save-btn:hover {
+  background: #a3d6a3;
+}
+
+.publish-btn {
+  background: #4caf50;
+  color: white;
+}
+
+.publish-btn:hover {
+  background: #3b9242;
+}
+
+.write-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-style: italic;
+  color: #2c5e3a;
+  background: #d5f1cd;
+  border-top: 2px dashed #a0d8a0;
+}
