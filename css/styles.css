@@ -489,7 +489,6 @@ body {
 }
 
 .menu-toggle {
-  position: absolute;
   right: 36px;
   top: 32px;
   font-size: 1.1rem;
