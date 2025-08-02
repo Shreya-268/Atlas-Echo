@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About - Atlas Echo</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/about.css" />
 </head>
 <body>
   <header>
@@ -12,14 +12,44 @@
       <h1 class="logo">Atlas Echo</h1>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="about-content">
-    <h2>About Atlas Echo</h2>
-    <p>This blog shares the stories and visuals from travels around the world. We capture the essence of each destination — from bustling cities to serene forests — through images and reflections.</p>
-  </main>
+  <h2>About Atlas Echo</h2>
+  <p>
+    Welcome to <strong>Atlas Echo</strong> — a chronicle of journeys, stories, and breathtaking moments across the globe. Here, travel isn't just about reaching a place, but about the echoes it leaves in your soul.
+  </p>
+
+  <div class="about-grid">
+    <div class="about-card glass">
+      <h3>🌎 Our Mission</h3>
+      <p>
+        To inspire wanderlust and mindfulness through evocative photography, stories, and honest travel reflections. We want you to experience city energy, wild tranquility, and new wonders with every post.
+      </p>
+    </div>
+    <div class="about-card glass">
+      <h3>📷 Travel Philosophy</h3>
+      <p>
+        We believe travel is pure discovery — in others, in places, and in yourself. Every story captures the magic of exploring with open eyes and an open heart.
+      </p>
+    </div>
+
+  <div class="about-gallery glass">
+    <img src="assets/Paris.jpg" alt="Paris" />
+    <img src="assets/Beach.jpg" alt="Beach" />
+    <img src="assets/Forest.jpg" alt="Forest" />
+  </div>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.about-content').classList.add('visible');
+  });
+</script>
+
+<script src="js/main.js"></script>
+
 </body>
 </html>
