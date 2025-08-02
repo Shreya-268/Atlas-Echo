@@ -61,29 +61,6 @@ prevBtn.addEventListener('click', () => {
 });
 
 
-// ============ Second Carousel Logic ============
-const track2 = document.getElementById('carouselTrack2');
-const prevBtn2 = document.getElementById('prevBtn2');
-const nextBtn2 = document.getElementById('nextBtn2');
-
-let slideIndex2 = 0;
-
-nextBtn2.addEventListener('click', () => {
-  const items = document.querySelectorAll('#carouselTrack2 .carousel-item');
-  if (slideIndex2 < items.length - 1) {
-    slideIndex2++;
-    track2.style.transform = `translateX(-${slideIndex2 * 100}%)`;
-  }
-});
-
-prevBtn2.addEventListener('click', () => {
-  if (slideIndex2 > 0) {
-    slideIndex2--;
-    track2.style.transform = `translateX(-${slideIndex2 * 100}%)`;
-  }
-});
-
-
 // ===== Ripple effect on click (Element 8) =====
 document.querySelectorAll('.gallery-item').forEach(item => {
   item.addEventListener('click', function(e) {
