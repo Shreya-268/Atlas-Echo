@@ -616,13 +616,13 @@ body {
 
 .marquee-container {
   width: 2800px; /* Start/end well inside the screen "green lines" */
-  max-width: 1160px;
+  max-width: 2100px;
   min-width: 320px;
   overflow: hidden;
   position: relative;
   background: rgba(255,255,255,0.14);
   border-radius: 26px;
-  box-shadow: 0 4px 20px 0 rgba(31,38,135,0.10);
+  box-shadow: 0 4px 21px 0 rgba(31,38,135,0.10);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   padding: 20px 0;
@@ -643,7 +643,7 @@ body {
 }
 
 .marquee-track img {
-  height: 160px;           /* Larger photo size */
+  height: 199px;           /* Larger photo size */
   width: auto;
   border-radius: 16px;
   box-shadow: 0 4px 14px rgba(31,38,135,0.12);
@@ -729,7 +729,7 @@ body {
 }
 
 .footer-logo {
-  font-size: 1.36rem;
+  font-size: 1.41rem;
   font-weight: bold;
   color: #bef0d2;
   display: flex;
