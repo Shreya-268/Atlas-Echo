@@ -21,6 +21,7 @@ Footer: Elegant dark glassy pastel-green footer with info, links, and icons.
 Mobile-friendly: Every component adapts from desktop to mobile.
 
 🗂 Project Structure
+assets/structure.png
 ATLAS-Echo/
 │
 ├── assets/
@@ -88,7 +89,7 @@ Place your PNG (e.g. travel.png) in /assets, then use:
 
 xml
 <div class="logo">
-  <img src="assets/travel.png" alt="Travel Logo Icon" class="logo-icon">
+  <img src="assets/example.png" alt="Travel Logo Icon" class="logo-icon">
   Atlas Echo
 </div>
 Add a new gallery image:
