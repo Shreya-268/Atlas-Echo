@@ -9,6 +9,7 @@
 <body>
 
 <header class="write-header">
+  <a href="drafts.html" class="view-drafts-btn">📄 View Drafts</a>
   <h1>🌿 Write Your Travel Story</h1>
   <p class="subtitle">Let the earth inspire your words.</p>
 </header>
@@ -27,6 +28,51 @@
 <footer class="write-footer">
   ✨ Every journey has a story. Let yours echo forever.
 </footer>
+
+<script>
+// ========== Preload draft if editing ==========
+const editing = JSON.parse(localStorage.getItem("editingDraft"));
+if (editing) {
+  document.querySelector(".blog-title").value = editing.title;
+  document.querySelector(".blog-body").value = editing.content;
+
+  localStorage.removeItem("editingDraft");
+
+  const drafts = JSON.parse(localStorage.getItem("drafts")) || [];
+  const updated = drafts.filter(d => d.id !== editing.id);
+  localStorage.setItem("drafts", JSON.stringify(updated));
+}
+
+// ========== Save Draft ==========
+document.querySelector(".save-btn").addEventListener("click", () => {
+  const title = document.querySelector(".blog-title").value.trim();
+  const content = document.querySelector(".blog-body").value.trim();
+
+  if (!title || !content) {
+    alert("Please fill in both title and content.");
+    return;
+  }
+
+  const draft = {
+    id: Date.now(),
+    title,
+    content,
+    timestamp: new Date().toLocaleString()
+  };
+
+  const savedDrafts = JSON.parse(localStorage.getItem("drafts")) || [];
+  savedDrafts.push(draft);
+  localStorage.setItem("drafts", JSON.stringify(savedDrafts));
+
+  alert("Draft saved successfully!");
+  window.location.href = "drafts.html";
+});
+
+// ========== Publish Blog ==========
+document.querySelector(".publish-btn").addEventListener("click", () => {
+  alert("🌼 Blog published (you can customize this logic)!");
+});
+</script>
 
 </body>
 </html>

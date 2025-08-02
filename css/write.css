@@ -1,13 +1,16 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom right, #e9fbe5, #d2f0cb);
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+              url('../assets/nature-bg.jpg') center center / cover no-repeat fixed;
   color: #1b4c2e;
 }
 
+
 .write-header {
+  position: relative;
   text-align: center;
-  padding: 3rem 2rem 1rem;
+  padding: 3.5rem 1.5rem 2rem;
   background: url('../assets/nature-bg.jpg') center/cover no-repeat;
   color: white;
   text-shadow: 0 2px 6px rgba(0,0,0,0.3);
@@ -18,8 +21,27 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.subtitle {
+.write-header .subtitle {
   font-size: 1.2rem;
+}
+
+.view-drafts-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  padding: 0.5rem 1.2rem;
+  background: #1f8e5e;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  z-index: 100;
+}
+
+.view-drafts-btn:hover {
+  background: #14694a;
 }
 
 .editor-container {
@@ -32,7 +54,7 @@ body {
 }
 
 .blog-title {
-  width: 100%;
+  width: 96%;
   font-size: 1.5rem;
   padding: 1rem;
   margin-bottom: 1.5rem;
@@ -42,7 +64,7 @@ body {
 }
 
 .blog-body {
-  width: 100%;
+  width: 96%;
   min-height: 300px;
   font-size: 1.1rem;
   padding: 1rem;
@@ -95,4 +117,13 @@ body {
   color: #2c5e3a;
   background: #d5f1cd;
   border-top: 2px dashed #a0d8a0;
+}
+
+@media (max-width: 600px) {
+  .view-drafts-btn {
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.9rem;
+  }
 }
