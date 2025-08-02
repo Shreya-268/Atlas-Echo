@@ -825,9 +825,8 @@ body {
 /* Glass Friends Button (from before) */
 .glass-btn.ourteam-btn {
   display: flex;
-  align-items: center;
-  gap: 7px;
-  padding: 10px 15px;
+  gap: 2px;
+  padding: 1px ;
   background: rgba(190, 240, 210, 0.25);
   border-radius: 22px;
   border: none;
@@ -856,7 +855,7 @@ body {
   display: flex;
   align-items: center;
   gap: 7px;
-  padding: 10px 15px;
+  padding: 1px 5px;
   background: rgba(190, 240, 210, 0.25);
   border-radius: 22px;
   border: none;
