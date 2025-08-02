@@ -490,7 +490,7 @@ body {
 /* ============ RESPONSIVE ============ */
 @media (max-width: 768px) {
   .animated-text {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
   .nav-menu {
     gap: 1rem;
@@ -633,9 +633,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  /* Moves the marquee up, closer to the middle */
   margin: 40px 0 0 0;
-  /* You can raise or lower by adjusting margin-top (first value) */
 }
 
 .marquee-container {
