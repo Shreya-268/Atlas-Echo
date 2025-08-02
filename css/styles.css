@@ -435,27 +435,6 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   color: #044f3d;
-  min-height: 32rem;
-}
-
-/* Each letter initially hidden, revealed on scroll */
-.inspire-vertical-letter {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.3s ease;
-}
-
-/* When revealed */
-.inspire-vertical-letter.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Once fully revealed, keep fixed styling */
-.inspire-vertical-letter.final-word {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-  transition: none;
 }
 
 .blog-btn {
@@ -614,4 +593,108 @@ body {
     margin-left: 16px;
     margin-right: 16px;
   }
+}
+
+.inspire-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* This centers all content vertically in viewport */
+}
+
+.marquee-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  /* Moves the marquee up, closer to the middle */
+  margin: 40px 0 0 0;
+  /* You can raise or lower by adjusting margin-top (first value) */
+}
+
+.marquee-container {
+  width: 2800px; /* Start/end well inside the screen "green lines" */
+  max-width: 1160px;
+  min-width: 320px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(255,255,255,0.14);
+  border-radius: 26px;
+  box-shadow: 0 4px 20px 0 rgba(31,38,135,0.10);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 20px 0;
+  border: 4px solid #bef0d2;
+  border-left-width: 7px;  /* Slightly thicker "green line" left */
+  border-right-width: 7px;
+  border-top: none;
+  border-bottom: none;
+  border-radius: 40px;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 54px;
+  animation: marquee-scroll 40s linear infinite; /* Slower for smooth scroll */
+  width: max-content; /* Required for infinite loop */
+}
+
+.marquee-track img {
+  height: 160px;           /* Larger photo size */
+  width: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(31,38,135,0.12);
+  object-fit: cover;
+  background: #c6eedb;
+  border: 3px solid #bef0d2;
+  transition: transform 0.24s, border-color 0.18s;
+}
+.marquee-track img:hover {
+  transform: scale(1.10) rotate(-2deg);
+  border-color: #39cba4;
+}
+
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container::before,
+.marquee-container::after {
+  content: '';
+  position: absolute;
+  top: 0; width: 50px; height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  /* Slightly wider fade for bolder start/end effect */
+}
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, #d6f5e3ee 85%, transparent 100%);
+}
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, #d6f5e3ee 85%, transparent 100%);
+}
+
+@media (max-width: 850px) {
+  .marquee-container { width: 97vw; min-width: 0; }
+  .marquee-track img { height: 88px; }
+  .marquee-track { gap: 30px; }
+}
+
+@media (max-width: 480px) {
+  .marquee-container { border-radius: 10px; }
+  .marquee-track img { height: 54px; border-radius: 8px; }
+  .marquee-container::before,
+  .marquee-container::after { width: 22px; }
 }
