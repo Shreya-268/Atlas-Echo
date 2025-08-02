@@ -1,0 +1,130 @@
+body {
+  background: #d6f5e3;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.navbar {
+  background: rgba(255,255,255,0.16);
+  backdrop-filter: blur(9px);
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 4px 30px rgba(31,38,135,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 40px;
+}
+
+.logo {
+  font-weight: 700;
+  color: #166e4c;
+  letter-spacing: 1.5px;
+  font-size: 1.37rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 1.15rem;
+  color: #257d61;
+  background: rgba(255,255,255,0.33);
+  padding: 7px 18px;
+  border-radius: 12px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background: #a7eac1;
+  color: #125635;
+}
+
+.services-content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255,255,255,0.23);
+  border-radius: 38px;
+  box-shadow: 0 10px 42px rgba(31,38,135,0.19);
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(60vw);
+  transition:
+    transform 0.75s cubic-bezier(.22,.84,.42,1.01),
+    opacity 0.58s cubic-bezier(.27,0,.72,1.01);
+}
+
+.services-content.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.services-content h2 {
+  font-size: 2.45rem;
+  color: #164e39;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 12px #bde8cf44;
+}
+
+.services-content > p {
+  font-size: 1.1rem;
+  color: #234232;
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.service-box {
+  background: rgba(255,255,255,0.3);
+  border-radius: 22px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(30,50,40,0.1);
+  backdrop-filter: blur(8px);
+}
+
+.service-box h3 {
+  color: #18945b;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  color: #274c3b;
+  font-size: 0.98rem;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 6vw;
+    border-radius: 0 0 22px 22px;
+  }
+
+  .logo {
+    font-size: 1.13rem;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .services-content {
+    padding: 18px 6vw;
+  }
+}

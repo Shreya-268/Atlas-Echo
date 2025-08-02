@@ -5,6 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atlas Echo - Travel Blog</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+    }
+
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      height: auto;
+      filter: blur(2px) brightness(0.7);
+      transition: filter 0.3s ease, transform 0.3s ease;
+    }
+
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255,255,255,0.1) 0%, transparent 80%);
+      pointer-events: none;
+      transition: background 0.2s ease;
+      z-index: 2;
+    }
+
+    .gallery-item:hover img {
+      filter: none;
+      transform: scale(1.03);
+    }
+  </style>
 </head>
 <body>
 
@@ -18,38 +48,33 @@
   </div>
 </div>
 
-  <!-- Navbar (Element 4) -->
-  <header class="custom-header">
+<header class="custom-header">
   <div class="logo">Atlas Echo</div>
   <button class="menu-toggle" id="menuToggle">Menu</button>
   <nav class="custom-nav" id="customNav">
     <button class="close-btn" id="closeBtn">Close</button>
     <ul>
       <li><a href="about.html"><span>ABOUT US</span> <span class="arrow">→</span></a></li>
-    <li><a href="works.html"><span>WORKS</span> <span class="arrow">→</span></a></li>
-    <li><a href="services.html"><span>SERVICES</span> <span class="arrow">→</span></a></li>
-    <li><a href="contact.html"><span>CONTACT</span> <span class="arrow">→</span></a></li>
+      <li><a href="works.html"><span>WORKS</span> <span class="arrow">→</span></a></li>
+      <li><a href="services.html"><span>SERVICES</span> <span class="arrow">→</span></a></li>
+      <li><a href="contact.html"><span>CONTACT</span> <span class="arrow">→</span></a></li>
+    </ul>
   </nav>
 </header>
 
-<!-- Hero Section (Element 9) -->
 <section id="hero" class="hero">
   <h2 class="tagline animated-text">See the World. Hear Its Echo.</h2>
   <p class="subtitle">A blog capturing the beauty of nature and journeys around the globe.</p>
 </section>
 
-<!-- Featured Products Section -->
 <section class="featured-products">
   <h2 class="featured-title">🌿 Featured Picks</h2>
   <p class="featured-desc">
     Where wanderlust meets everyday living — explore a collection crafted to inspire your travels and echo your connection with the natural world.
   </p>
+</section>
 
-
-<!-- Gallery Section Side-by-Side -->
 <section id="gallery-section" class="gallery-flex-container">
-
-  <!-- 📸 Left: Carousel -->
   <div class="carousel-column">
     <div class="carousel-container">
       <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
@@ -63,7 +88,6 @@
     </div>
   </div>
 
-  <!-- 🖼️ Right: Static Grid -->
   <div class="static-grid-column">
     <div class="image-grid small-grid">
       <div class="gallery-item ripple"><img src="assets/Beach.jpg" alt="Lake" /></div>
@@ -72,13 +96,9 @@
       <div class="gallery-item ripple"><img src="assets/paris.jpg" alt="Canyon" /></div>
     </div>
   </div>
-
 </section>
 
-<!-- Second Gallery Section (Flipped layout) -->
 <section class="gallery-flex-container">
-
-  <!-- 🖼️ Left: Static Grid -->
   <div class="static-grid-column">
     <div class="image-grid small-grid">
       <div class="gallery-item ripple"><img src="assets/Beach.jpg" alt="Temple" /></div>
@@ -88,7 +108,6 @@
     </div>
   </div>
 
-  <!-- 📸 Right: Carousel -->
   <div class="carousel-column">
     <div class="carousel-container">
       <button class="carousel-btn prev" id="prevBtn2">&#10094;</button>
@@ -101,26 +120,31 @@
       <button class="carousel-btn next" id="nextBtn2">&#10095;</button>
     </div>
   </div>
-
 </section>
-
-
 
 <section class="inspire-section">
   <div id="inspireWords" class="animated-text-word"></div>
-<a href="write.html" class="blog-btn">Start Blog</a>
-<p class="blog-quote">✨ “Start Writing Your Journey. Let Every Place Tell Its Story.”</p>
+  <a href="write.html" class="blog-btn">Start Blog</a>
+  <p class="blog-quote">✨ “Start Writing Your Journey. Let Every Place Tell Its Story.”</p>
 </section>
 
-
-<!-- Marquee (Element 6) -->
 <section class="marquee">
   <div class="marquee-content">
     <span>🌍 Travel • Nature • Photography • Adventure • Culture •</span>
   </div>
 </section>
 
-
+<script>
+document.querySelectorAll('.gallery-item').forEach(container => {
+  container.addEventListener('mousemove', e => {
+    const rect = container.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    container.style.setProperty('--x', `${x}px`);
+    container.style.setProperty('--y', `${y}px`);
+  });
+});
+</script>
 
 <script src="js/main.js"></script>
 </body>
