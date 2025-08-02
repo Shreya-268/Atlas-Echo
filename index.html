@@ -50,7 +50,45 @@
 
 <header class="custom-header">
   <div class="logo">Atlas Echo</div>
+   <div class="header-actions">
+  <button class="glass-btn friends-btn">
+  <span class="btn-icon">👥</span>Friends</button>
   <button class="menu-toggle" id="menuToggle">Menu</button>
+  </div>
+  <div class="friends-popup glass" id="friendsPopup" style="display:none;">
+  <div class="popup-header">
+    <span class="popup-title">Friends &amp; Requests</span>
+    <button class="close-popup" id="closeFriendsPopup">&times;</button>
+  </div>
+  <div class="popup-divider"></div>
+  <div class="suggested-title">Suggested Friends</div>
+  <div class="suggested-list">
+    <div class="suggested-item">
+      <img src="assets/user1.jpg" alt="Elena Rodriguez" class="suggested-avatar"/>
+      <div class="suggested-info">
+        <span class="suggested-name">Elena Rodriguez</span>
+        <span class="suggested-place">Chile</span>
+      </div>
+      <button class="add-friend-btn">👤+</button>
+    </div>
+    <div class="suggested-item">
+      <img src="assets/user2.jpg" alt="Marcus Johansson" class="suggested-avatar"/>
+      <div class="suggested-info">
+        <span class="suggested-name">Marcus Johansson</span>
+        <span class="suggested-place">Finland</span>
+      </div>
+      <button class="add-friend-btn">👤+</button>
+    </div>
+    <div class="suggested-item">
+      <img src="assets/user3.jpg" alt="Priya Sharma" class="suggested-avatar"/>
+      <div class="suggested-info">
+        <span class="suggested-name">Priya Sharma</span>
+        <span class="suggested-place">Maldives</span>
+      </div>
+      <button class="add-friend-btn">👤+</button>
+    </div>
+  </div>
+</div>
   <nav class="custom-nav" id="customNav">
     <button class="close-btn" id="closeBtn">Close</button>
     <ul>
@@ -155,9 +193,50 @@
 
 <section class="marquee">
   <div class="marquee-content">
-    <span>🌍 Travel • Nature • Photography • Adventure • Culture •</span>
+    <span>• Travel • Nature • Photography • Adventure • Culture •</span>
   </div>
 </section>
+
+<footer class="atlas-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">🌏<span>Atlas Echo</span></div>
+      <p class="footer-desc">
+        A travel blog capturing journeys, stories, and visuals from around the globe.
+      </p>
+      <div class="footer-icons">
+        <span title="Community">👥</span>
+        <span title="Share">🔗</span>
+        <span title="Gallery">📷</span>
+      </div>
+    </div>
+    <div class="footer-link-group">
+      <div class="footer-heading">Explore</div>
+      <a href="#">Destinations</a>
+      <a href="#">Travel Stories</a>
+      <a href="#">Photo Gallery</a>
+      <a href="#">World Map</a>
+    </div>
+    <div class="footer-link-group">
+      <div class="footer-heading">Tools</div>
+      <a href="#">Flight Tracker</a>
+      <a href="#">Weather Forecast</a>
+      <a href="#">Trip Planner</a>
+      <a href="#">Nature Sounds</a>
+    </div>
+    <div class="footer-link-group">
+      <div class="footer-heading">Community</div>
+      <a href="#">Share Your Story</a>
+      <a href="#">Join Community</a>
+      <a href="#">Travel Events</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Atlas Echo. All rights reserved. Made with <span style="color:#f86d85;">♥</span> for travelers worldwide.
+  </div>
+</footer>
+
 
 <script>
 document.querySelectorAll('.gallery-item').forEach(container => {

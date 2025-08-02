@@ -126,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
 // ===== Inspire Words Animation =====
 const inspireWords = [
   "I",
@@ -161,4 +162,14 @@ document.querySelectorAll('.gallery-item').forEach(item => {
     item.style.setProperty('--mouse-x', `${x}px`);
     item.style.setProperty('--mouse-y', `${y}px`);
   });
+});
+
+// Show Friends Popup
+document.querySelector('.friends-btn').addEventListener('click', function() {
+  document.getElementById('friendsPopup').style.display = 'block';
+});
+
+// Hide Friends Popup
+document.getElementById('closeFriendsPopup').addEventListener('click', function() {
+  document.getElementById('friendsPopup').style.display = 'none';
 });
