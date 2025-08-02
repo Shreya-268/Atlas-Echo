@@ -38,6 +38,52 @@ const interval = setInterval(() => {
   }
 }, 30);
 
+// ============ Simple Carousel Logic ============
+const track = document.getElementById('carouselTrack');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+let slideIndex = 0;
+
+nextBtn.addEventListener('click', () => {
+  const items = document.querySelectorAll('.carousel-item');
+  if (slideIndex < items.length - 1) {
+    slideIndex++;
+    track.style.transform = `translateX(-${slideIndex * 100}%)`;
+  }
+});
+
+prevBtn.addEventListener('click', () => {
+  if (slideIndex > 0) {
+    slideIndex--;
+    track.style.transform = `translateX(-${slideIndex * 100}%)`;
+  }
+});
+
+
+// ============ Second Carousel Logic ============
+const track2 = document.getElementById('carouselTrack2');
+const prevBtn2 = document.getElementById('prevBtn2');
+const nextBtn2 = document.getElementById('nextBtn2');
+
+let slideIndex2 = 0;
+
+nextBtn2.addEventListener('click', () => {
+  const items = document.querySelectorAll('#carouselTrack2 .carousel-item');
+  if (slideIndex2 < items.length - 1) {
+    slideIndex2++;
+    track2.style.transform = `translateX(-${slideIndex2 * 100}%)`;
+  }
+});
+
+prevBtn2.addEventListener('click', () => {
+  if (slideIndex2 > 0) {
+    slideIndex2--;
+    track2.style.transform = `translateX(-${slideIndex2 * 100}%)`;
+  }
+});
+
+
 // ===== Ripple effect on click (Element 8) =====
 document.querySelectorAll('.gallery-item').forEach(item => {
   item.addEventListener('click', function(e) {
