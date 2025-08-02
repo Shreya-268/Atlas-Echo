@@ -1,42 +1,31 @@
-🌍 Atlas Echo Travel Blog
+🌍 Atlas Echo Travel Blog.
 A modern, creative travel blog project with pastel green-glassmorphism design, interactive photo galleries, dynamic hero section, and friendly navigation/utility components.
 
 ✨ Features
-Glassy pastel UI: All buttons, navbars, popups, and footers use real glassmorphism, with blur and soft pastel greens.
+• Glassy pastel UI: All buttons, navbars, popups, and footers use real glassmorphism, with blur and soft pastel greens.
 
-Responsive navbar: Sticky, stylish navbar with logo, Friends, Our Team, Menu buttons.
+• Responsive navbar: Sticky, stylish navbar with logo, Friends, Our Team, Menu buttons.
 
-Animated loader: Unique introductory loader (with "See the World. Hear Its Echo." animation).
+• Animated loader: Unique introductory loader (with "See the World. Hear Its Echo." animation).
 
-Dynamic carousels & grids: Responsive, side-by-side carousels and image grids, with hover/ripple animation and creative effects.
+• Dynamic carousels & grids: Responsive, side-by-side carousels and image grids, with hover/ripple animation and creative effects.
 
-Friends popup: Glassmorphism popup with suggested friends, add buttons, and custom avatars.
+• Friends popup: Glassmorphism popup with suggested friends, add buttons, and custom avatars.
 
-Functional Buttons: All buttons in the project — including  Start Blog, Save Draft, Explore, and navigation links — are fully functional and trigger real interactions.
+• Functional Buttons: All buttons in the project — including  Start Blog, Save Draft, Explore, and navigation links — are fully functional and    trigger real interactions.
 
-Animated word marquees: Infinite horizontally-scrolling image and text marquees, styled like digital film.
+• Animated word marquees: Infinite horizontally-scrolling image and text marquees, styled like digital film.
 
-Footer: Elegant dark glassy pastel-green footer with info, links, and icons.
+• Footer: Elegant dark glassy pastel-green footer with info, links, and icons.
 
-Mobile-friendly: Every component adapts from desktop to mobile.
+• Mobile-friendly: Every component adapts from desktop to mobile.
 
 🗂 Project Structure
-assets/structure.png
 ATLAS-Echo/
-│
-├── assets/
-│   ├── blog.jpg, blog1.jpg, ... Beach.jpg, Forest.jpg, user1.jpg, etc.
-│   └── travel.png
-│
-├── css/
-│   ├── styles.css
-│   ├── about.css, contact.css, drafts.css, services.css, team.css, works.css, write.css
-│
-├── js/
-│   ├── main.js
-│   └── team.js
-│
-├── index.html
+├── assets/             # All images (hero, galleries, avatars, icons)
+├── css/                # Separate CSS per page/module
+├── js/                 # JS logic for loader, nav, popup, carousel
+├── index.html          # Home
 ├── about.html
 ├── contact.html
 ├── drafts.html
@@ -44,8 +33,8 @@ ATLAS-Echo/
 ├── team.html
 ├── works.html
 ├── write.html
-├── package-lock.json (likely unused by browser-only project)
-|── README.md
+└── README.md
+
 
 🚀 Getting Started
 Clone or download this project.
