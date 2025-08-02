@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Saved Drafts - Atlas Echo</title>
+  <link rel="stylesheet" href="css/drafts.css" />
+  <style>
+    /* Include this in drafts.css if not already there */
+    .new-blog-btn {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 0.6rem 1.4rem;
+      background: #1f8e5e;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .new-blog-btn:hover {
+      background: #14694a;
+    }
+  </style>
+</head>
+<body>
+
+<header class="drafts-header">
+  <h1>🌾 Your Blog Drafts</h1>
+  <p>Nature has many stories — here are the ones waiting to bloom.</p>
+  <a href="write.html" class="new-blog-btn">📝 Write New Blog</a>
+</header>
+
+<main class="drafts-container" id="draftsList">
+  <!-- Draft cards appear here -->
+</main>
+
+<footer class="drafts-footer">
+  🌿 Don’t let your story fade with the leaves — finish it.
+</footer>
+
+<script>
+function renderDrafts() {
+  const container = document.getElementById("draftsList");
+  const drafts = JSON.parse(localStorage.getItem("drafts")) || [];
+
+  if (drafts.length === 0) {
+    container.innerHTML = "<p class='empty'>No drafts saved yet.</p>";
+    return;
+  }
+
+  container.innerHTML = drafts.map(d => `
+    <div class="draft-card" data-id="${d.id}">
+      <h2>${d.title}</h2>
+      <p class="preview">${d.content.substring(0, 100)}...</p>
+      <p class="timestamp">Saved on: ${d.timestamp}</p>
+      <div class="buttons">
+        <button onclick="editDraft(${d.id})">✏️ Edit</button>
+        <button onclick="deleteDraft(${d.id})">🗑️ Delete</button>
+        <button onclick="publishDraft(${d.id})">🌼 Publish</button>
+      </div>
+    </div>
+  `).join("");
+}
+
+function deleteDraft(id) {
+  const drafts = JSON.parse(localStorage.getItem("drafts")) || [];
+  const updated = drafts.filter(d => d.id !== id);
+  localStorage.setItem("drafts", JSON.stringify(updated));
+  renderDrafts();
+}
+
+function editDraft(id) {
+  const drafts = JSON.parse(localStorage.getItem("drafts")) || [];
+  const draft = drafts.find(d => d.id === id);
+  localStorage.setItem("editingDraft", JSON.stringify(draft));
+  window.location.href = "write.html";
+}
+
+function publishDraft(id) {
+  alert("🎉 Blog Published!");
+  deleteDraft(id);
+}
+
+window.onload = renderDrafts;
+</script>
+
+</body>
+</html>
